@@ -1,16 +1,20 @@
-import org.openqa.selenium.By;
+package tests;
+
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import page.objects.LoginPage;
+import page.objects.StrefaKlienta;
 
 import java.util.concurrent.TimeUnit;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class SucceedLoginTest {
+public class FailedLoginTest {
 
     private WebDriver driver;
 
@@ -27,12 +31,12 @@ public class SucceedLoginTest {
         StrefaKlienta strefaKlienta = new StrefaKlienta(driver);
         LoginPage loginPage = new LoginPage(driver);
         strefaKlienta.clickOnStrefaKlientaLink();
-        loginPage.typeIntoUserNameField("olgierd@jacher.pl");
-        loginPage.typeIntoPasswordField("NOWEhaslo1!");
+        loginPage.typeIntoUserNameField("WrongLogin");
+        loginPage.typeIntoPasswordField("WrongPassword");
         loginPage.clickOnLoginButton();
-        String approvedMessage = loginPage.getApprovedMessage();
+        String warningMessage = loginPage.getWarningMessage();
 
-        assertEquals(approvedMessage,"Przepraszamy, w systemie wystąpił błąd.");
+        assertEquals(warningMessage,"Błędna nazwa użytkownika lub hasło.\n" + "Spróbuj zalogować się ponownie.");
 
     }
 
