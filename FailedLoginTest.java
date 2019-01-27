@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class FailedLoginTests {
+public class FailedLoginTest {
 
     private WebDriver driver;
 

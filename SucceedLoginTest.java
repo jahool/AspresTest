@@ -32,7 +32,7 @@ public class SucceedLoginTest {
         loginPage.clickOnLoginButton();
         String approvedMessage = loginPage.getApprovedMessage();
 
-        assertEquals(approvedMessage,"Przepraszamy, w systemie wystąpił błąd."); 
+        assertEquals(approvedMessage,"Przepraszamy, w systemie wystąpił błąd.");
 
     }
 
