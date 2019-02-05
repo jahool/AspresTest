@@ -7,7 +7,7 @@ import page.objects.MainPage;
 
 import static org.testng.AssertJUnit.assertEquals;
 
-public class SucceedLoginTest extends TestBase {
+public class LoginTests extends TestBase {
 
 
     @Test
