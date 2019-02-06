@@ -1,20 +1,23 @@
 package page.objects;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import static org.testng.AssertJUnit.assertEquals;
 
 public class MainPage {
     private  WebDriver driver;
 
     public MainPage(org.openqa.selenium.WebDriver driver) {
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
 
 
      //Lokatory
+
 
     @FindBy(xpath = "//*[@id=\"nav\"]/a[1]")
     private WebElement stronaGlownaGornylewyRog;
@@ -84,12 +87,50 @@ public class MainPage {
 
 
 
-
-
-
     public void clickOnStrefaKlientaLink() {
         strefaKlientGornyLewyRog.click();
     }
+    public String checkPageTitle(){
+        String pageTitle = driver.getTitle();
+        return pageTitle;
+    }
+    public String checkStronaGlownaGornylewyRog(){
+       String stronaGlowna =  stronaGlownaGornylewyRog.getText();
+       return stronaGlowna;
+    }
+    public String clickStronaGlownaGornyLewyRog(){
+        stronaGlownaGornylewyRog.click();
+        String pageTitle = driver.getTitle();
+        return pageTitle;
+
+    }
+    public String checkStrefaKlientaGornylewyRog() {
+        String strefaKlienta = strefaKlientGornyLewyRog.getText();
+        return strefaKlienta;
+
+    }
+    public String clickStrefaKlientaGornyLewyRog() {
+        strefaKlientGornyLewyRog.click();
+        String strefaKlientapageTitle = driver.getTitle();
+        return strefaKlientapageTitle;
+    }
+
+    public String checkKontaktZNamiPrawyGornyRog(){
+        String kontaktZNami = kontaktZNamiPrawyGornyRog.getText();
+        return kontaktZNami;
+    }
+
+    public String clickKontaktZNamiPrawyGornyRog(){
+        kontaktZNamiPrawyGornyRog.click();
+        String kontaktZNamiTitle = driver.getTitle();
+        return kontaktZNamiTitle;
+    }
+
+    public String checkBiuroRachunkoweUpperButton(){
+        String biuroRachunkoweUpperButton = biuroRachunkoweGorneMenu.getText();
+        return biuroRachunkoweUpperButton;
+    }
+
 
 
 

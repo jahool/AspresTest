@@ -36,4 +36,49 @@ public class LoginTests extends TestBase {
 
         assertEquals(warningMessage, "Błędna nazwa użytkownika lub hasło.\n" + "Spróbuj zalogować się ponownie.");
     }
+
+    @Test
+    public void StronaGlowna(){
+        MainPage mainPage = new MainPage(driver);
+
+        String mainPageTitle = mainPage.checkPageTitle();
+        assertEquals (mainPageTitle,"Biuro rachunkowe Wrocław Krzyki - usługi księgowe");
+
+        String stronaGlownaButton = mainPage.checkStronaGlownaGornylewyRog();
+        assertEquals(stronaGlownaButton,"Strona Główna");
+
+        String stronaGlownaButtonClick = mainPage.clickStronaGlownaGornyLewyRog();
+        assertEquals (stronaGlownaButtonClick,"Biuro rachunkowe Wrocław Krzyki - usługi księgowe");
+
+        String strefaKlientaButtonText = mainPage.checkStrefaKlientaGornylewyRog();
+        assertEquals(strefaKlientaButtonText, "Strefa klienta");
+
+        String strefaKlientaButtonClick = mainPage.clickStrefaKlientaGornyLewyRog();
+        assertEquals(strefaKlientaButtonClick,"Logowanie");
+
+        driver.navigate().to("http://www.aspres.pl/");
+
+        String kontaktZNamiButtonText = mainPage.checkKontaktZNamiPrawyGornyRog();
+        assertEquals(kontaktZNamiButtonText,"Kontakt z nami");
+
+        String kontaktZNamiButtonClick = mainPage.clickKontaktZNamiPrawyGornyRog();
+        assertEquals(kontaktZNamiButtonClick, "Biuro rachunkowo As-Pres, Wrocław ul. Czerniawska 2A/27");
+
+        driver.navigate().to("http://www.aspres.pl/");
+
+        String biuroRachunkoweUpperButtonCheck = mainPage.checkBiuroRachunkoweUpperButton();
+        assertEquals(biuroRachunkoweUpperButtonCheck,"Biuro rachunkowe");
+
+
+
+
+
+
+
+
+
+
+
+
+    }
 }
