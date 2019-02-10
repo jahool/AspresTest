@@ -69,16 +69,48 @@ public class LoginTests extends TestBase {
         String biuroRachunkoweUpperButtonCheck = mainPage.checkBiuroRachunkoweUpperButton();
         assertEquals(biuroRachunkoweUpperButtonCheck,"Biuro rachunkowe");
 
+        String biuroRachunkoweUpperButtonClick = mainPage.clickBiuroRachunkoweUpperButton();
+        assertEquals( biuroRachunkoweUpperButtonClick, "Biuro rachunkowe Wrocław Krzyki - usługi księgowe");
 
+        driver.navigate().to("http://www.aspres.pl/");
 
+        String naszaOfertaGornemenuButtonCheck = mainPage.checkNaszaOfertaGornemenuButton();
+        assertEquals(naszaOfertaGornemenuButtonCheck,"Nasza oferta");
 
+        String naszaOfertaGornemenuButtonClick = mainPage.clickNaszaOfertaGornemenuButton();
+        assertEquals(naszaOfertaGornemenuButtonClick,"Oferta biura rachunkowo-księgowego As-Pres z Wrocławia");
 
+        driver.navigate().to("http://www.aspres.pl/");
 
+        String PromocjeGornemenuButtonClick = mainPage.clickPromocjeGornemenuButton();
+        assertEquals(PromocjeGornemenuButtonClick,"Promocje - As-Pres Wrocława");   // błąd na stronie - literówka w tytule strony
 
+        driver.navigate().to("http://www.aspres.pl/");
 
+        String promocjeGornemenuButtonCheck = mainPage.checkPromocjeGornemenu();
+        assertEquals(promocjeGornemenuButtonCheck,"Promocje");
 
+        String kontaktGorneMenuButtonClick = mainPage.clickKontaktGorneMenu();
+        assertEquals(kontaktGorneMenuButtonClick,"Biuro rachunkowo As-Pres, Wrocław ul. Czerniawska 2A/27");
 
+        driver.navigate().to("http://www.aspres.pl/");
 
+        String kontaktGorneMenuButtonCheck = mainPage.checkKontaktGorneMenu();
+        assertEquals(kontaktGorneMenuButtonCheck,"Kontakt");
 
+        String jedenHeaderText = mainPage.clickJedenHeader();
+        assertEquals(jedenHeaderText,"Dlaczego powinieneś nas wybrać?");
+
+        String dwaHeaderText = mainPage.clickDwaHeader();
+        assertEquals(dwaHeaderText, "Dlaczego outsourcing usług księgowych ?");
+
+        String trzyHeaderText = mainPage.clickTrzyHeader();
+        assertEquals(trzyHeaderText,"Obsługa księgowa już od 70 zł netto/m-c !!!");
+
+        String czteryHeaderText = mainPage.clickCzteryHeader();
+        assertEquals(czteryHeaderText,"W cenie program do fakturowania");
+
+        String clickPiecHeaderText = mainPage.clickPiecHeader();
+        assertEquals(clickPiecHeaderText,"Zapewniamy profesjonalną obsługę !");
     }
 }

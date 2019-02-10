@@ -1,5 +1,6 @@
 package page.objects;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -129,6 +130,75 @@ public class MainPage {
     public String checkBiuroRachunkoweUpperButton(){
         String biuroRachunkoweUpperButton = biuroRachunkoweGorneMenu.getText();
         return biuroRachunkoweUpperButton;
+    }
+
+    public String clickBiuroRachunkoweUpperButton(){
+        biuroRachunkoweGorneMenu.click();
+        String biuroRachunkoweTitle = driver.getTitle();
+        return biuroRachunkoweTitle;
+    }
+
+    public String checkNaszaOfertaGornemenuButton(){
+        String naszaOfertaGornemenuButton = naszaOfertaGornemenu.getText();
+        return naszaOfertaGornemenuButton;
+    }
+
+    public String clickNaszaOfertaGornemenuButton(){
+        naszaOfertaGornemenu.click();
+        String naszaOfertaGornemenuTitle = driver.getTitle();
+        return naszaOfertaGornemenuTitle;
+    }
+
+    public String clickPromocjeGornemenuButton(){
+        promocjeGornemenu.click();
+        String promocjeGornemenuTitle = driver.getTitle();
+        return promocjeGornemenuTitle;
+    }
+
+    public String checkPromocjeGornemenu(){
+        String promocjeGornemenuButton = promocjeGornemenu.getText();
+        return promocjeGornemenuButton;
+    }
+
+    public String clickKontaktGorneMenu(){
+        kontaktGorneMenu.click();
+        String kontaktGorneMenuButton = driver.getTitle();
+        return kontaktGorneMenuButton;
+    }
+
+    public String checkKontaktGorneMenu(){
+        String kontaktGorneMenuButton = kontaktGorneMenu.getText();
+        return kontaktGorneMenuButton;
+    }
+
+    public String clickJedenHeader(){
+        jedenHeader.click();
+        String jedenHeaderText = driver.findElement(By.xpath("//*[@id=\"0\"]/span")).getText();
+        return jedenHeaderText;
+    }
+
+    public String clickDwaHeader(){
+        dwaHeader.click();
+        String dwaHeaderText = driver.findElement(By.xpath("//*[@id=\"1\"]/span")).getText();
+        return dwaHeaderText;
+    }
+
+    public String clickTrzyHeader(){
+        trzyHeader.click();
+        String trzyHeaderText = driver.findElement(By.xpath("//*[@id=\"2\"]/span")).getText();
+        return trzyHeaderText;
+    }
+
+    public String clickCzteryHeader(){
+        czteryHeader.click();
+        String czteryHeaderText = driver.findElement(By.xpath("//*[@id=\"3\"]/span")).getText();
+        return czteryHeaderText;
+    }
+
+    public String clickPiecHeader(){
+        piecHeader.click();
+        String piecHeaderText = driver.findElement(By.xpath("//*[@id=\"4\"]/span")).getText();
+        return piecHeaderText;
     }
 
 
