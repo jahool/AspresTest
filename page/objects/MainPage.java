@@ -201,6 +201,52 @@ public class MainPage {
         return piecHeaderText;
     }
 
+    public String clickBiuroRachunkoweDolnemenu(){
+        biuroRachunkoweDolnemenu.click();
+        String biuroRachunkoweDolnemenuText = driver.getTitle();
+        return biuroRachunkoweDolnemenuText;
+    }
+
+    public String clickBiuroKsiegoweDolneMenu(){
+        biuroKsiegoweDolneMenu.click();
+        String biuroKsiegoweDolneMenuText = driver.getTitle();
+        return biuroKsiegoweDolneMenuText;
+    }
+
+    public String clickOfertaDolneMenu(){
+        ofertaDolneMenu.click();
+        String ofertaDolneMenuText = driver.getTitle();
+        return ofertaDolneMenuText;
+    }
+    public String clickPromocjeDolneMenu(){
+        promocjeDolneMenu.click();
+        String promocjeDolneMenuText = driver.getTitle();
+        return promocjeDolneMenuText;
+    }
+    public String clickPrzydatneLinkiDolneMenu(){
+        String przydatneLinkiDolneMenuText = driver.getTitle();
+        return przydatneLinkiDolneMenuText;
+    }
+    public String clickUslugiKsiegoweDolneMenu(){
+        String uslugiKsiegoweDolneMenuText = driver.getTitle();
+        return uslugiKsiegoweDolneMenuText;
+    }
+    public String clickKontaktDolneMenu(){
+        String kontaktDolneMenuText = driver.getTitle();
+        return kontaktDolneMenuText;
+    }
+
+    public String checkEmailDolnaStopka(){
+        String emailDolnaStopkaText = emailDolnaStopka.getText();
+        return emailDolnaStopkaText;
+    }
+
+    public String clickMapaStronyDolnaStopka(){
+        String mapaStronyDolnaStopkaText = driver.getTitle();
+        return mapaStronyDolnaStopkaText;
+    }
+
+
 
 
 

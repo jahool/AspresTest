@@ -1,3 +1,8 @@
+/*tu du:
+- changes on the websitesite - check!
+- make order with the names of Methods and Strings
+- subpage tests*/
+
 package tests;
 
 
@@ -112,5 +117,35 @@ public class LoginTests extends TestBase {
 
         String clickPiecHeaderText = mainPage.clickPiecHeader();
         assertEquals(clickPiecHeaderText,"Zapewniamy profesjonalną obsługę !");
+
+        String biuroRachunkoweDolnemenuTitle = mainPage.clickBiuroRachunkoweDolnemenu();
+        assertEquals(biuroRachunkoweDolnemenuTitle, "Biuro rachunkowe Wrocław Krzyki - usługi księgowe");
+
+        String biuroKsiegoweDolneMenuTitle = mainPage.clickBiuroKsiegoweDolneMenu();
+        assertEquals(biuroKsiegoweDolneMenuTitle,"Biuro księgowe Wrocław As-Pres");
+
+        String ofertaDolneMenuTitle = mainPage.clickOfertaDolneMenu();
+        assertEquals(ofertaDolneMenuTitle,"Oferta biura rachunkowo-księgowego As-Pres z Wrocławia");
+
+        String promocjeDolneMenuTitle = mainPage.clickPromocjeDolneMenu();
+        assertEquals(promocjeDolneMenuTitle,"Promocje - As-Pres Wrocława");
+
+        String przydatneLinkiDolneMenuTitle = mainPage.clickPrzydatneLinkiDolneMenu();
+        assertEquals(przydatneLinkiDolneMenuTitle,"Przydatne adresy - As-Pres Wrocław");
+
+        String uslugiKsiegoweDolneMenuTitle = mainPage.clickUslugiKsiegoweDolneMenu();
+        assertEquals(uslugiKsiegoweDolneMenuTitle,"Usługi księgowe - Wrocław - As-Pres");
+
+        String kontaktDolneMenuTitle = mainPage.clickKontaktDolneMenu();
+        assertEquals(kontaktDolneMenuTitle,"Biuro rachunkowo As-Pres, Wrocław ul. Czerniawska 2A/27");
+
+        String emailDolnaStopkaText = mainPage.checkEmailDolnaStopka();
+        assertEquals(emailDolnaStopkaText,"biuro@aspres.pl ");
+
+        String mapaStronyDolnaStopkaText = mainPage.clickMapaStronyDolnaStopka();
+        assertEquals(mapaStronyDolnaStopkaText,"Mapa strony - As-Pres Wrocław");
+
+
+
     }
 }
